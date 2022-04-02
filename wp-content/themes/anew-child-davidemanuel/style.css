@@ -1,0 +1,164 @@
+/*
+	Theme Name: David Emanuel (Anew Child)
+	Theme URI: http://rimshot.ch/
+	Description: Sample child theme for customization.
+	Author: rimshot.ch
+	Author URI: http://rimshot.ch/
+	Template: anew
+	Version: 1.0.0
+*/
+
+@import url("/wp-content/themes/anew/style.css");
+
+/* ------------------------------------------------------------------------- *
+ *  Theme customization starts here
+/* ------------------------------------------------------------------------- */
+
+/* Global */
+.mystyle {}
+
+.nav-text { /* always display the nav-text "david-emanuel" */
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+}
+#header .container .pad {
+	display: none;
+}
+
+/* hide category */
+#page article ul.post-meta li a {
+	display: none;
+}
+h1.page-title-single {
+	display: none;
+}
+#back-to-top {
+	display: none;
+}
+
+
+/* begin contact-form */
+.wpcf7-form textarea{
+	height: 156px;
+}
+/* end contact-form */
+
+
+
+/* begin facebook-gallery */
+.facebook-album-container .facebook-album-wrapper {
+	margin-left: 0 !important;
+	margin-right: 4px !important;
+}
+.facebook-album-container .facebook-album-wrapper .fbalbum .image {
+	width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+	.facebook-album-container .facebook-album-wrapper {
+		width: 24%;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.facebook-album-container .facebook-album-wrapper {
+		width: 32%;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.facebook-album-container .facebook-album-wrapper {
+		width: 48%;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.facebook-album-container .facebook-album-wrapper {
+		width: 99%;
+	}
+}
+/* end facebook-gallery */
+
+
+
+
+/* bigger than 720px: this is when the menu changes from touch (with menu-toggler) to normal screen mode. */
+@media only screen and (min-width: 720px) and (min-height: 500px) {
+	.nav-text {
+		float: left;
+	}
+	#menu-main {
+		text-align: right;
+	}
+	.post-title {
+		font-size: 26px;
+	}
+}
+
+/* half width boxes. for less than */
+	.halfwidth {
+		padding-right: 20px;
+		float: left;
+	}
+
+@media only screen and (min-width: 700px) {
+	.halfwidth {
+		width: 46%; 
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.halfwidth {
+		width: 100%;
+		min-width: 290px; 
+		max-width: 500px;
+	}
+}
+
+
+/* bigger than 1025px */
+@media only screen and (min-width: 1025px) and (min-height: 500px) {
+
+	#menu-main li.menu-item { /* default padings: 15px. adding 25px */
+		padding-top: 40px; padding-bottom: 34px;
+		font-size: 20px;
+	}
+	#menu-main li.menu-item a:hover {
+		background-color: transparent;
+	}
+	#menu-main li.menu-item ul { /* für 2. hierarchiestufe bereinigen */
+		top: 75px;
+	}
+	#menu-main li.menu-item ul li { /* für 2. hierarchiestufe zurücksetzen */
+		padding-top: 0; padding-bottom: 0;
+	}
+	.nav-text {
+		padding-top: 56px; padding-bottom: 40px;
+		padding-left: 50px;
+		font-size: 28px;
+	}
+	header#header { /* default paddings: 50px. adding the 2x25px of above */
+		padding-top: 130px !important; 
+	}
+	
+}
+
+/* Tablet - 800px, 768px & 720px */
+@media only screen and (min-width: 720px) and (max-width: 800px) {
+	.mystyle {}
+}
+
+
+/* Mobile - 480px & 320px */
+@media only screen and (max-width: 719px) {
+	.mystyle {}
+}
+
+
+/* Mobile - 320px */
+@media only screen and (max-width: 479px) {
+	.mystyle {}
+}
+
+
+.toggle-search { /* bei mobile an dieser stelle "David Emanuel" .nav-text  */
+	display: none;
+}
